@@ -113,6 +113,13 @@ x = 3.0
 print(not flag or (y + z >= x - z))
 
 
+# ### Short Circuit Evaluation
+# Notice that, in case of `and`, if the first part of expression is false, the entire expression must be false
+# * Example: `(5 < 3) and (4 > 3)`
+# Likewise, in case of `or`, if the first part of expression is true, the entire expression must be true
+# * Example: `(4 > 2) or (2 > 3)`
+# In these two cases, Python short-circuits evaluation: Evaluation stops after first part of expression is evaluated
+# 
 # ### Complement (`not`)
 # The complement of a condition can be obtained by applying the `not` operator
 # * Example: The complement of `temp > 32` is `not (temp > 32)`, which can also be written as `temp <= 32`
@@ -126,20 +133,13 @@ print(not flag or (y + z >= x - z))
 # `(temp <= 32) or (num_clouds != 0 and num_clouds != 1)` which is true when the temperature is at or below freezing, and there are more than 1 cloud in the sky.
 # 
 
-# ### Short Circuit Evaluation
-# Notice that, in case of `and`, if the first part of expression is false, the entire expression must be false
-# * Example: `(5 < 3) and (4 > 3)`
-# Likewise, in case of `or`, if the first part of expression is true, the entire expression must be true
-# * Example: `(4 > 2) or (2 > 3)`
-# In these two cases, Python short-circuits evaluation: Evaluation stops after first part of expression is evaluated
-# 
 # ## Logical Assignment
 # In addition to integers, floats, and strings, there is a data type called `Boolean`. We can store `True` or `False` in a Boolean type:
 
-# In[9]:
+# In[2]:
 
-branching_condition = True
-print("%s %d" %(is_true, is_true))
+boolean_condition = True
+print("%s %d" %(boolean_condition, boolean_condition))
 
 
 # ## Predicate Functions
