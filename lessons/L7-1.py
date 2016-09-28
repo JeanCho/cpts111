@@ -134,6 +134,10 @@
 #     * Applies to conditional statements with compound logic
 # * Define and apply Boolean expressions
 #     * DeMorgan's Law
+# * What are the three types of statements that algorithms are composed of?
+#     * Sequential statements
+#     * Conditional statements
+#     * Iterative statements
 # * Construct multiple alternative `if` statements in Python
 # * Construct nested `if` statements
 # * How is false defined in Python? How about true?
@@ -211,8 +215,11 @@ print(4 > 3 and 2 == 2 and 3 > 9 and 34532 // 324 > 293)
 
 # ### 6
 # Complement the following statements by applying DeMorgan's Law. Reduce the expressions it to the simplest terms possible:
-# 1. `!(!(x and !y) or (x and y > 0)`
-# 1. `a or !(b and !(x < y) or a == 0)`
+# 1. `not (not (x and not y) or (x and y > 0)`
+# 1. `a or not (b and not (x < y) or a == 0)`
+# 1. `(a and b != c and not c) || (not a and not b and c == a)`
+# 1. `not (x < 15 and y >= 1 and (y or x))`
+# 1. `(a or not b or not c) and (a > c or not c)`
 
 # ### 7
 # Write a program that prompts the user to enter a distance in kilometers. As part of your program, write and call the following functions:
@@ -258,7 +265,7 @@ def main():
 
 # In[ ]:
 
-def main(value)
+Def main(value)
     character = "A",
     
     print("Enter a character: )
@@ -266,9 +273,220 @@ def main(value)
     retun character
 
 
+# ### 13
+# What will be printed by the code below?
+
+# In[ ]:
+
+x = 0.0
+y = 3.0
+
+if y < 5.0:
+    if y >= 0.0:
+        print("In the second if statement")
+        x = 2 * y
+    else:
+        print("In the innermost else statement")
+        x = -3 * y
+        print("I love programming!")
+else:
+    x = 0 * y
+x = x + 1
+print("The value of x is %f" %(x))
+
+
+# ### 14
+# Convert this nested if statement to a single if statement with a compound condition:
+
+# In[ ]:
+
+if age >= 35:
+    if born_in_us == 1:
+        if us_resident >= 14:
+            print("Congrats! You can run for president.")
+
+
+# ### 15
+# Write a multiple-alternative if statement to represent the following table (display the stage in life):
+# 
+# |Age (in years)|Stage in life|
+# |-|-|
+# |Less than 13|Kid|
+# |13 - 19|Teenager|
+# |20 - 54|Adult|
+# |55 and above|Senior citizen|
+
+# ### 16 
+# Correct the syntax errors in the code below:
+
+# In[ ]:
+
+If x > 1.0
+z = x
+else
+    z = y
+
+
+# ### 17
+# Based on the code below, specify values for `x` and `y` that will cause the strings below to print (EXAMPLE: x > 0 and x < 100, y > 10). If it is not possible to print a string, explain why.
+# 1.	I am nice bye
+# 1.	You are weird not funny
+# 1.	I am not nice bye
+# 1.	You are weird not nice
+# 1.	nice bye
+# 1.	You are funny not weird
+# 1.	I am nice
+# 1.	You are funny not funny not weird
+# 1.	You are funny smart
+# 1.	You are weird
+# 1.	bye
+# l.	(nothing printed)
+
+# In[ ]:
+
+# , end="" suppresses the newline
+if x < 0 and y < 0: 
+    print("You are ", end="")
+    if x < 10: 
+        print("weird ", end="")
+    else:
+        print("funny ", end="")
+
+    if y >= 0:
+        print("not funny ", end="")
+    else:
+        if x > 0:
+            print("not weird ", end="")
+        else:
+            print("smart ", end="")
+else:
+    if x == 8: 
+        print("I am ", end="")
+    if y < 10:
+        print("nice ", end="")
+    else:
+        print("not nice ", end="")
+    print("bye", end="")
+
+
+# ### 18
+# Using the following code, what values of `a`, `b`, `x` and `y` will print the desired output? Be very careful!
+# #### 1
+# one
+# 
+# forty-two
+# 
+# a_____ b_____ x_____ y_____
+# 
+# #### 2
+# two
+# 
+# three
+# 
+# four
+# 
+# a_____ b_____ x_____ y_____
+# 
+# Also given a value for `a`, `b`, `x` and `y` what will be the output?
+# 
+# #### 3
+# ```
+# a = 0 
+# b = 0 
+# x = -3 
+# y = -3
+# ```
+# 
+# #### 4
+# ```
+# a = 1 
+# b = 0 
+# x = -1
+# y = 5
+# ```
+
+# In[ ]:
+
+if b < 0 or a > 0:
+    if x > 0:
+        print("one")
+    else:
+        print("two")
+    if y < 5:
+        print("forty-two")
+else:
+    if x < 0:
+        print("three")
+    if y < 0:
+        print("four")
+    else:
+        print("five")
+print("six")
+
+
+# ### 19
+# Which has higher precedence?
+# 1.	`or` or `and`
+# 1.	`==` or `<=` 
+# 1.	`and` or `not`
+# 1.	`==` or `!=` 
+# 1.	`<` or `not`
+
+# ### 20
+# 12.	Using the code below, show the range of values for x and y (EXAMPLE: x > 0 and x < 100, y > 10) which would cause the given statements to be displayed.
+# 
+# 1. Strawberry pie
+# 1. Burger
+# 1. Burger with fries
+# 1. Coffee with cream
+# 1. Coffee with sugar
+# 1. Strawberry
+# 1. Burger
+# 1. Coffee
+
+# In[ ]:
+
+# , end="" suppresses the newline
+if x <= 0:
+    if y > 0:
+        print("Strawberry ", end="")
+        if x < 5:
+            print("pie");
+        elif y < 2:
+            print("Burger ", end="")
+        else:
+            print("with fries")
+    else:
+        print("Coffee ", end="")
+        if x == 0:
+            print("with cream")
+        elif y > 0:
+            print("with sugar")
+
+
+# ### 21
+# What will be printed by the code below?
+
+# In[ ]:
+
+x = 0
+y = 0
+if x < 5:
+    print("a")
+    if y < x:
+        print("bc")
+    elif x > 5:
+        print("def")
+    else:
+        print("ghijk")
+else:
+    print("lmnop")
+
+
 # ## TODO
 # 1. Please study for the exam! At a *minimum*:
 #     * Work or re-work through:
+#         * The above practice problems
 #         * Problems 1-3 from L2-2 and L5-1
 #         * Tasks from the review lab: [Lab 6](http://nbviewer.jupyter.org/github/gsprint23/cpts111/blob/master/labs/Lab6.ipynb)
 #         * Applying functions to PA1
