@@ -105,6 +105,92 @@ else: # players_guess < num_to_guess
 #     * Even if more than one condition is true, only the body of the first true condition will execute.
 # * If there is an `else` block in a multiple-alternative statement (there doesn't have to be an `else` block), it has to be last (meaning after the `if` and `elif` tests).
 
+# ## Practice Problem
+# Write a program to prompt the user to enter the current relative humidity (an integer between 0 and 100). Display a message according to the following table:
+# 
+# |Humidity|Message|
+# |--------|-------|
+# |20% or lower|Bone dry|
+# |21% to 40%|Dry|
+# |41% to 60%|Moderately dry|
+# |61% to 80%|Moderately humid|
+# |81% or higher|Humid|
+# 
+# You should have at least 2 functions in your program:
+# 1. Prompts the user and reads in the humidity
+# 1. Displays the corresponding message
+
+# In[1]:
+
+def get_humidity():
+    '''
+    
+    '''
+    print("Please enter the relative humidity, an integer between 0 and 100 inclusive")
+    humidity = int(input())
+    return humidity
+
+def display_humidity_message(hum):
+    '''
+    
+    '''
+    if hum <= 20:
+        print("Bone dry")
+    elif hum <= 40:
+        print("Dry")
+    elif hum <= 60:
+        print("Moderately dry")
+    elif hum <= 80:
+        print("Moderately humid")
+    else:
+        print("Humid")
+        
+def main():
+    '''
+    
+    '''
+    rel_humidity = get_humidity()
+    display_humidity_message(rel_humidity)
+
+main()
+
+
+# We can rewrite `display_humidity_message()` to return the message instead of display it (let's rename the function `compute_humidity_message()`. We could then write another function to display the message:
+
+# In[2]:
+
+def compute_humidity_message(hum):
+    '''
+    
+    '''
+    if hum <= 20:
+        return "Bone dry"
+    elif hum <= 40:
+        return "Dry"
+    elif hum <= 60:
+        return "Moderately dry"
+    elif hum <= 80:
+        return "Moderately humid"
+    else:
+        return "Humid"
+        
+def display_humidity_message(msg):
+    '''
+    
+    '''
+    print("The relative humidity is \"%s\"" %(msg))
+    
+def main():
+    '''
+    
+    '''
+    rel_humidity = get_humidity()
+    humidity_message = compute_humidity_message(rel_humidity)
+    display_humidity_message(humidity_message)
+
+main()
+
+
 # ## TODO
 # 1. Study for midterm #1
 # 1. Work on PA3

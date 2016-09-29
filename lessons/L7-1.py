@@ -159,6 +159,7 @@
 #     * Read or re-read chapters 1-3, 5 (no recursion), 6, and Appendix A and in the Downey textbook. 
 
 # ## Extra Practice Problems
+
 # ### 1
 # What is the output of the following code?
 
@@ -340,7 +341,7 @@ else
 # 1.	You are funny smart
 # 1.	You are weird
 # 1.	bye
-# l.	(nothing printed)
+# 1.	(nothing printed)
 
 # In[ ]:
 
