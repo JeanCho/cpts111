@@ -163,7 +163,7 @@
 # ### 1
 # What is the output of the following code?
 
-# In[1]:
+# In[ ]:
 
 y = 55.9
 x = 1 // 3
@@ -198,7 +198,7 @@ else:
 # ### 4
 # What is the output of the following code?
 
-# In[2]:
+# In[ ]:
 
 def my_function(param1, param2):
     num1 = 5
@@ -231,7 +231,7 @@ print(4 > 3 and 2 == 2 and 3 > 9 and 34532 // 324 > 293)
 
 
 # ### 6
-# Complement the following statements by applying DeMorgan's Law. Reduce the expressions it to the simplest terms possible:
+# Complement the following statements by applying DeMorgan's Law. Reduce the expressions to the simplest terms possible:
 # 1. `not (x and not y) or (x and y > 0)`
 # 1. `a or not (b and not (x < y) or a == 0)`
 # 1. `(a and b != c and not c) or (not a and not b and c == a)`
