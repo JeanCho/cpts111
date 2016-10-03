@@ -36,7 +36,7 @@
 # Please be aware that, because you will be taking the exam during a normal lecture period (50 minutes), time will be extremely tight for the exam so manage your time well. If you show up late to class, you will have less time to take the exam. 
 
 # ## Exam Coverage
-# The exam covers the everything we have covered so far in the course. Here is an outline of the topics we have covered so far:
+# The exam covers everything we have covered so far in the course. Here is an outline of the topics we have covered so far:
 # 
 # ### 1 Introduction to Computer Science, Programming, and Python
 # (Chapter 1 *The Way of the Program* in the Downey textbook.)
@@ -163,7 +163,7 @@
 # ### 1
 # What is the output of the following code?
 
-# In[ ]:
+# In[1]:
 
 y = 55.9
 x = 1 // 3
@@ -174,7 +174,23 @@ print("The value %d is in the variable y\n" %(y))
 
 
 # ### 2
-# Define and call a function that accepts 2 floats called `operand1` and `operand2` and a string called `op`. Return the result value of `operand1 op operand2` for the operators "+", "-", "*", "/", "//", "%".
+# What is the output of the following code?
+
+# In[ ]:
+
+x = 0
+y = 0
+if x < 5:
+    print("a")
+    if y < x:
+        print("bc")
+    elif x > 5:
+        print("def")
+    else:
+        print("ghijk")
+else:
+    print("lmnop")
+
 
 # ### 3
 # Define and call a function that accepts 3 numbers. The function computes and returns the average of the three numbers.
@@ -182,7 +198,7 @@ print("The value %d is in the variable y\n" %(y))
 # ### 4
 # What is the output of the following code?
 
-# In[ ]:
+# In[2]:
 
 def my_function(param1, param2):
     num1 = 5
@@ -216,10 +232,10 @@ print(4 > 3 and 2 == 2 and 3 > 9 and 34532 // 324 > 293)
 
 # ### 6
 # Complement the following statements by applying DeMorgan's Law. Reduce the expressions it to the simplest terms possible:
-# 1. `not (not (x and not y) or (x and y > 0)`
+# 1. `not (x and not y) or (x and y > 0)`
 # 1. `a or not (b and not (x < y) or a == 0)`
-# 1. `(a and b != c and not c) || (not a and not b and c == a)`
-# 1. `not (x < 15 and y >= 1 and (y or x))`
+# 1. `(a and b != c and not c) or (not a and not b and c == a)`
+# 1. `x < 15 and y >= 1 and (y or x)`
 # 1. `(a or not b or not c) and (a > c or not c)`
 
 # ### 7
@@ -237,11 +253,12 @@ print(4 > 3 and 2 == 2 and 3 > 9 and 34532 // 324 > 293)
 # For example, your function should return 63 if 7, 21, and 42 are passed into it or 0 if 8, 3, and -7 are passed into it, etc.
 
 # ### 10
-# Write a function called `compute_discount_amount()` that determines the total discount, in dollars, for a customer based on age and student/employment status. The function accepts the ticket price (a floating-point) and age (an integer) as input parameters and does the following to determine the discount.
+# Write a program that determines the total discount, in dollars, for a customer based on age and student/employment status. The program prompts the user for a ticket price (a floating-point) and age (an integer) and sends these values as input parameters to a function called `compute_discount_amount()`. `compute_discount_amount()` does the following to determine the discount:
 # 
 # 1. Prompts the user for student status of customer. The user should enter "y" if they are currently a student; "n" otherwise.
-# 1. Prompts the user for employment status of customer. The user should type "y" if they are a WSU employee; "n" otherwise.
-# 1. A customer may be a student and an employee. A customer is considered a senior citizen if they are 65 years or older. The following discounts should be applied: 10% for employees, 12% for senior citizens, 15% for students, and 20% for students who are also employees. The function returns the value of the ticket price times the discount percentage.
+# 1. Prompts the user for employment status of customer. The user should type "y" if they are a WSU employee; "n" otherwise. Note: a customer may be a student and an employee. 
+# 1. The following discounts should be applied: 10% for employees, 12% for senior citizens, 15% for students, and 20% for students who are also employees. Note: a customer is considered a senior citizen if they are 65 years or older. 
+# 1. The function returns the value of the ticket price times the discount percentage.
 
 # ### 11
 # Given the following `main()` function, write the `evenly_divisible()` function. 
@@ -463,25 +480,6 @@ if x <= 0:
             print("with cream")
         elif y > 0:
             print("with sugar")
-
-
-# ### 21
-# What will be printed by the code below?
-
-# In[ ]:
-
-x = 0
-y = 0
-if x < 5:
-    print("a")
-    if y < x:
-        print("bc")
-    elif x > 5:
-        print("def")
-    else:
-        print("ghijk")
-else:
-    print("lmnop")
 
 
 # ## TODO
